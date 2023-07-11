@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @mozyes
-- 👀 I’m interested in improving my internet
-- 🌱 I’m currently learning fq_codel
+- 👀 I’m interested in improving my coding skill
+- 🌱 I’m currently learning Python, Machine learning and tensor flow
 - 📫 How to reach me... here
 
 <!---
