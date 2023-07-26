@@ -12,3 +12,5 @@ table.add_rows(
     ]
 )
 print(table)
+table.align = "l"
+print(table)
