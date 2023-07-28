@@ -1,12 +1,11 @@
-import turtle
-import turtle as T
+import turtle as t
 import random
 
 colours = ["CornflowerBlue", "DarkOrchid", "IndianRed", "DeepSkyBlue", "LightSeaGreen", "wheat", "SlateGray",
            "SeaGreen"]
 degree = [0, 90 , 180, 270]
 
-tim = T.Turtle()
+tim = t.Turtle()
 def walk():
     tim.color(random.choice(colours))
     tim.pensize(5)
@@ -18,5 +17,5 @@ while i <= 200:
     walk()
     i +=1
 
-screen = T.Screen()
+screen = t.Screen()
 screen.exitonclick()
