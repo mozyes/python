@@ -1,6 +1,6 @@
-import turtle as T
+import turtle as t
 
-timmy = T.Turtle()
+timmy = t.Turtle()
 for i in range(1, 100):
     if i % 4 != 0:
         timmy.pendown()
@@ -10,5 +10,5 @@ for i in range(1, 100):
         timmy.forward(1)
 
 
-screen = T.Screen()
+screen = t.Screen()
 screen.exitonclick()
