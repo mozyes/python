@@ -3,9 +3,9 @@ import turtle
 
 screen = turtle.Screen()
 screen.title("U.S States Game")
-screen.bgpic("states.gif") #this is image of the state empty
+screen.bgpic("states.gif") # this is image of the state empty
 
-data = pandas.read_csv("50_states.csv")
+data = pandas.read_csv("50_states.csv") # this is list of state with co-ordinates for turtle graphics
 all_states = data.state.to_list()
 guessed_states = []
 
