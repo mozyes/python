@@ -1,3 +1,5 @@
+# why not directly read data? because it's a hassle to clean the data with 'with open("weather_data.csv") as data_file: and then data = data_file.readlines()
+
 import csv
 
 with open("weather_data.csv") as data_file:
