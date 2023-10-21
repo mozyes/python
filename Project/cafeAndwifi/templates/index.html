@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>List of Cafes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>List of Cafes</h1>
+        <a href="{{ url_for('add_cafe') }}" class="add-link">Add a Cafe</a>
+    </header>
+    <div class="cafe-list">
+        {% for cafe in cafes %}
+            <div class="cafe-card">
+                <h2>{{ cafe.name }}</h2>
+                <p><strong>Location:</strong> {{ cafe.location }}</p>
+                <p><strong>Has Sockets:</strong> {% if cafe.has_sockets %}Yes{% else %}No{% endif %}</p>
+                <p><strong>Has Toilet:</strong> {% if cafe.has_toilet %}Yes{% else %}No{% endif %}</p>
+                <p><strong>Has Wi-Fi:</strong> {% if cafe.has_wifi %}Yes{% else %}No{% endif %}</p>
+                <p><strong>Can Take Calls:</strong> {% if cafe.can_take_calls %}Yes{% else %}No{% endif %}</p>
+                <p><strong>Number of Seats:</strong> {{ cafe.seats }}</p>
+                <p><strong>Coffee Price:</strong> {{ cafe.coffee_price }}</p>
+                <a href="{{ url_for('delete_cafe', cafe_id=cafe.id) }}" class="delete-link">Delete</a>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

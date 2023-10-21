@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add New Cafe</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Add a New Cafe</h1>
+    </header>
+    <div class="form-container">
+        <form method="POST" action="{{ url_for('add_cafe') }}">
+            <label for="name">Cafe Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="map_url">Map URL:</label>
+            <input type="url" id="map_url" name="map_url" required>
+
+            <label for="img_url">Image URL:</label>
+            <input type="url" id="img_url" name="img_url" required>
+
+            <label for="location">Location:</label>
+            <input type="text" id="location" name="location" required>
+
+            <div class="checkbox-group">
+                <label for="has_sockets">Has Sockets:</label>
+                <input type="checkbox" id="has_sockets" name="has_sockets">
+            </div>
+
+            <div class="checkbox-group">
+                <label for="has_toilet">Has Toilet:</label>
+                <input type="checkbox" id="has_toilet" name="has_toilet">
+            </div>
+
+            <div class="checkbox-group">
+                <label for="has_wifi">Has Wi-Fi:</label>
+                <input type="checkbox" id="has_wifi" name="has_wifi">
+            </div>
+
+            <div class="checkbox-group">
+                <label for="can_take_calls">Can Take Calls:</label>
+                <input type="checkbox" id="can_take_calls" name="can_take_calls">
+            </div>
+
+            <label for="seats">Number of Seats:</label>
+            <input type="text" id="seats" name="seats">
+
+            <label for="coffee_price">Coffee Price:</label>
+            <input type="text" id="coffee_price" name="coffee_price">
+
+            <button type="submit" class="submit-button">Submit</button>
+        </form>
+        <a href="{{ url_for('get_all_cafes') }}" class="cancel-link">Cancel</a>
+    </div>
+</body>
+</html>
