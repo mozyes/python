@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Joke Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        h1 {
+            color: #3498db;
+        }
+        p {
+            color: #2c3e50;
+            font-size: 18px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #3498db;
+            color: #ffffff;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Random Joke Generator</h1>
+    {% if joke_data %}
+        {% if joke_data.type == 'twopart' %}
+            <p>{{ joke_data.setup }}</p>
+            <p>{{ joke_data.delivery }}</p>
+        {% else %}
+            <p>{{ joke_data.joke }}</p>
+        {% endif %}
+        <button onclick="window.location.reload()">Get Another Joke</button>
+    {% else %}
+        <p>Oops! Something went wrong. Unable to fetch a joke.</p>
+    {% endif %}
+</body>
+</html>
